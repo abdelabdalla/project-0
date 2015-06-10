@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="My Awesome Apps"
+        android:id="@+id/titletext"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/titletext"
+        android:layout_centerHorizontal="true" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titletext"
+            android:layout_centerHorizontal="true">
+            <Button style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spotify Streamer"
+                android:id="@+id/spotButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="34dp"
+                android:layout_below="@+id/titletext"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:onClick="spotPress"/>
+
+            <Button style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scores App"
+                android:id="@+id/scoresButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/spotButton"
+                android:layout_alignEnd="@+id/spotButton"
+                android:layout_alignParentStart="true"
+                android:onClick="scorePress"/>
+
+            <Button style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Library App"
+                android:id="@+id/libButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/scoresButton"
+                android:layout_alignEnd="@+id/scoresButton"
+                android:layout_alignParentStart="true"
+                android:onClick="libPress"/>
+
+            <Button style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build It Bigger"
+                android:id="@+id/buildButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/libButton"
+                android:layout_alignEnd="@+id/libButton"
+                android:layout_alignParentStart="true"
+                android:onClick="buildPress"/>
+
+            <Button style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XYZ Reader"
+                android:id="@+id/xyzButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/buildButton"
+                android:layout_alignEnd="@+id/buildButton"
+                android:layout_alignParentStart="true"
+                android:onClick="xyzPress"/>
+
+            <Button style="@style/CapButton"
+                android:theme="@style/CapButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Capstone"
+                android:id="@+id/capButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/xyzButton"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/xyzButton"
+                android:onClick="capPress"/>
+        </LinearLayout>
+        </ScrollView>
+
+
+</RelativeLayout>
