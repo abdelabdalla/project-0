@@ -24,7 +24,6 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/titletext"
             android:layout_centerHorizontal="true">
             <Button style="@style/Button"
                 android:layout_width="match_parent"
@@ -36,7 +35,7 @@
                 android:layout_below="@+id/titletext"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentStart="true"
-                android:onClick="spotPress"/>
+                android:onClick="displayToast"/>
 
             <Button style="@style/Button"
                 android:layout_width="match_parent"
@@ -47,7 +46,7 @@
                 android:layout_below="@+id/spotButton"
                 android:layout_alignEnd="@+id/spotButton"
                 android:layout_alignParentStart="true"
-                android:onClick="scorePress"/>
+                android:onClick="displayToast"/>
 
             <Button style="@style/Button"
                 android:layout_width="match_parent"
@@ -58,7 +57,7 @@
                 android:layout_below="@+id/scoresButton"
                 android:layout_alignEnd="@+id/scoresButton"
                 android:layout_alignParentStart="true"
-                android:onClick="libPress"/>
+                android:onClick="displayToast"/>
 
             <Button style="@style/Button"
                 android:layout_width="match_parent"
@@ -69,7 +68,7 @@
                 android:layout_below="@+id/libButton"
                 android:layout_alignEnd="@+id/libButton"
                 android:layout_alignParentStart="true"
-                android:onClick="buildPress"/>
+                android:onClick="displayToast"/>
 
             <Button style="@style/Button"
                 android:layout_width="match_parent"
@@ -80,7 +79,7 @@
                 android:layout_below="@+id/buildButton"
                 android:layout_alignEnd="@+id/buildButton"
                 android:layout_alignParentStart="true"
-                android:onClick="xyzPress"/>
+                android:onClick="displayToast"/>
 
             <Button style="@style/CapButton"
                 android:theme="@style/CapButton"
@@ -92,7 +91,7 @@
                 android:layout_below="@+id/xyzButton"
                 android:layout_alignParentStart="true"
                 android:layout_alignEnd="@+id/xyzButton"
-                android:onClick="capPress"/>
+                android:onClick="displayToast"/>
         </LinearLayout>
         </ScrollView>
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -16,45 +17,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //View view = this.getWindow().getDecorView();
-        //view.setBackgroundColor(Color.parseColor("#b2ebf2"));
     }
 
-    public void spotPress(View view){
+    public void displayToast(View view){
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
-        Toast t = Toast.makeText(context,"This button will launch my Spotify Streamer",duration);
-        t.show();
-    }
-    public void scorePress(View view){
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        Toast t = Toast.makeText(context,"This button will launch my Scores app",duration);
-        t.show();
-    }
-    public void libPress(View view){
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        Toast t = Toast.makeText(context,"This button will launch my Library app",duration);
-        t.show();
-    }
-    public void buildPress(View view){
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        Toast t = Toast.makeText(context,"This button will launch my Build It Bigger app",duration);
-        t.show();
-    }
-    public void xyzPress(View view){
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        Toast t = Toast.makeText(context,"This button will launch my XYZ Reader",duration);
-        t.show();
-    }
-    public void capPress(View view){
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        Toast t = Toast.makeText(context,"This button will launch my Capstone app",duration);
+        Button button = (Button) view;
+        CharSequence text = button.getText();
+        CharSequence output = "This will launch my " + text + " app :)";
+        Toast t = Toast.makeText(context,output,duration);
         t.show();
     }
 
